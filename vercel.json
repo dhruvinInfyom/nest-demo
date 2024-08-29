@@ -1,5 +1,8 @@
 {
     "version": 2,
+    "env": {
+        "MONGO_URI": "@chat_api_mongo_uri"
+    },
     "builds": [
         {
             "src": "src/main.ts",
@@ -10,7 +13,7 @@
         {
             "src": "/(.*)",
             "dest": "src/main.ts",
-            "methods": ["GET", "POST", "PUT", "PATCH", "DELETE"]
+            "methods": ["GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS"]
         }
     ]
 }
