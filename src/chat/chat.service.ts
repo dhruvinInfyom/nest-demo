@@ -88,7 +88,10 @@ export class ChatService {
       ]);
       return UserList;
     } catch (err) {
-      console.log(err);
+      return {
+        message: err.message,
+        status: HttpStatus.BAD_REQUEST,
+      };
     }
   }
 

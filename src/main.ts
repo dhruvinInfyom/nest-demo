@@ -10,10 +10,17 @@ async function bootstrap() {
     .setTitle('Demo')
     .setDescription('API demo')
     .setVersion('1.0')
+    .addBearerAuth(
+      {
+        type: 'http',
+        scheme: 'bearer',
+        bearerFormat: 'JWT', 
+      },
+      'Authorization',
+    )
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('swagger-ui', app, document);
-
   await app.listen(3000);
 }
 bootstrap();
