@@ -13,7 +13,7 @@ import { MessagesModule } from './messages/messages.module';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://localhost:27017/nest-demo'),
+    MongooseModule.forRoot('mongodb+srv://dhruvininfyom:DhruvinInfyom@cluster0.5sajf.mongodb.net/'),
     UsersModule,
     TheatersModule,
     SessionsModule,
